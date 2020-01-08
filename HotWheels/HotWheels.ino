@@ -101,13 +101,12 @@ const int dataRate = 10;         // frequency of serial writes, in milliseconds
 // setup() method is a special Arduino method that runs once at beginning of
 // program. Typically used to initialize pins and connections
 void setup(){
+  //initialize serial connection (to communicate with excel)
+  Serial.begin (9600);
 
   // initialized communication with accelerometer
   // note, if accelerometer has problems, program can hange here
   initializeAccelerometer();
-
-  //initialize serial connection (to communicate with excel)
-  Serial.begin (9600);
 
   // Set each of our gate pins to be used as input pins
   pinMode(gate1pin, INPUT);
@@ -442,7 +441,15 @@ void initializeAccelerometer() {
   uint8_t deviceID = Wire.read();
 
   while (deviceID != 0x33){
-    delay(1); // TODO review looks like a bug... hangs forever if no LIS3DH on first Wire.read() should at least write "No LISD3H" to serial while it hangs
+    for (int time = 0; time < 10000; time++){
+      delay(1); // TODO review looks like a bug... hangs forever if no LIS3DH on first Wire.read() should at least write "No LISD3H" to serial while it hangs
+    }
+    if (deviceID == 0x33){
+      break;
+    }
+    Serial.println("Accelerometer Not Found");
+    delay (20000);
+    break;
   }
 
   //Turn on all axes and set to normal mode
