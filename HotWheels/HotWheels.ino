@@ -1,7 +1,7 @@
 //===-------__ Hacking STEM – HotWheels_Accel.X.X.X.ino – Arduino __-------===//
 // For use with the Measuring Speed to Understand Forces & Motion lesson plan
 // available from Microsoft Education Workshop at 
-// https://www.microsoft.com/en-us/education/education-workshop/sensorized-track.aspx
+// https://education.microsoft.com/lesson/55389d0b
 // http://aka.ms/hackingSTEM
 //
 // Overview:

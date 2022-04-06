@@ -2,7 +2,7 @@
 Microcontroller code for Microsoft Hacking STEM Hot Wheels Speedometry Lesson Plan adapted for Arduino
 
 # Getting Started
-1. Download lesson assets at https://www.microsoft.com/en-us/education/education-workshop/sensorized-track.aspx
+1. Download lesson assets at https://education.microsoft.com/lesson/55389d0b
 1. Build your Hot Wheels track!
 1. Use [Arduino IDE](https://www.arduino.cc/en/Main/Software) to flash the .ino to your [Arduino Uno](https://store.arduino.cc/usa/arduino-uno-rev3) microcontroller
 1. Verify data interactions in Excel
